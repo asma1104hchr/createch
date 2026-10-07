@@ -82,17 +82,6 @@ export default function Hero() {
             {h.btnPortfolio}
           </a>
         </div>
-        <div
-          className="hero__stats animate-fade-up"
-          style={{ animationDelay: "0.65s" }}
-        >
-          {h.stats.map((s) => (
-            <div className="hero__stat" key={s.label}>
-              <span className="hero__stat-val">{s.value}</span>
-              <span className="hero__stat-lbl">{s.label}</span>
-            </div>
-          ))}
-        </div>
       </div>
 
       <div className="hero__scroll">

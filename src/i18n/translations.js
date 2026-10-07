@@ -16,11 +16,6 @@ export const translations = {
       desc: "Cartes visites sur mesure · Sites vitrines modernes · Modernisation de sites\net services complets pour étudiants universitaires 🎓",
       btnPricing: "Voir les tarifs 💰",
       btnPortfolio: "Mon portfolio →",
-      stats: [
-        { value: "150+", label: "Clients satisfaits" },
-        { value: "4.9★", label: "Note moyenne" },
-        { value: "48h", label: "Délai moyen" },
-      ],
     },
     services: {
       badge: "Mes Services",
@@ -280,11 +275,6 @@ export const translations = {
       desc: "بطاقات عمل مخصصة · مواقع عرض عصرية · تحديث المواقع\nوخدمات متكاملة للطلاب الجامعيين 🎓",
       btnPricing: "عرض الأسعار 💰",
       btnPortfolio: "أعمالي →",
-      stats: [
-        { value: "+150", label: "عميل راضٍ" },
-        { value: "4.9★", label: "متوسط التقييم" },
-        { value: "48h", label: "متوسط مدة التسليم" },
-      ],
     },
     services: {
       badge: "خدماتي",
