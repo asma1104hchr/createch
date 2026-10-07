@@ -1,0 +1,207 @@
+.students {
+  padding: 100px 0;
+  background: var(--off-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.students__bg {
+  position: absolute;
+  top: 0; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(147,51,234,0.04), transparent 70%);
+  pointer-events: none;
+}
+
+.students__header { text-align: center; margin-bottom: 56px; }
+.students__header .section-sub { margin: 16px auto 0; }
+
+.students__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.students__card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1.5px solid var(--gray-200);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.students__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(147,51,234,0.2);
+}
+
+.students__icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.students__title {
+  font-size: 20px;
+  font-family: var(--font-display);
+  color: var(--blue-deep);
+  margin-bottom: 10px;
+}
+
+.students__desc {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.students__details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.students__details li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+.students__details li span {
+  color: #9333ea;
+  font-weight: 700;
+}
+
+.students__price {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  color: #9333ea;
+  margin-bottom: 16px;
+}
+
+.students__btn {
+  color: #9333ea !important;
+  border-color: #9333ea !important;
+}
+
+.students__btn:hover {
+  background: #9333ea !important;
+  color: white !important;
+}
+
+/* Process */
+.students__process {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  border: 1px solid var(--gray-200);
+  margin-bottom: 32px;
+}
+
+.students__process-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--blue-deep);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.students__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+}
+
+.students__step {
+  flex: 1;
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+}
+
+.students__step-num {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-bright), var(--accent-warm));
+  color: white;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+}
+
+.students__step h4 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--blue-deep);
+  margin-bottom: 6px;
+}
+
+.students__step p {
+  font-size: 13px;
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+
+.students__step-arrow {
+  position: absolute;
+  top: 12px;
+  right: -12px;
+  font-size: 20px;
+  color: var(--blue-soft);
+  z-index: 1;
+}
+
+/* Urgent Banner */
+.students__urgent {
+  background: linear-gradient(135deg, var(--blue-bright) 0%, #0284c7 100%);
+  border-radius: var(--radius-lg);
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.students__urgent-icon { font-size: 32px; flex-shrink: 0; }
+
+.students__urgent > div { flex: 1; }
+
+.students__urgent strong {
+  font-family: var(--font-display);
+  font-size: 18px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.students__urgent p {
+  font-size: 13px;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .students__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .students__grid { grid-template-columns: 1fr; }
+  .students__steps { flex-direction: column; gap: 24px; }
+  .students__step-arrow { display: none; }
+  .students__process { padding: 32px 24px; }
+  .students__urgent { flex-direction: column; text-align: center; padding: 28px 24px; }
+}

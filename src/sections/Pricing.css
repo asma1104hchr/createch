@@ -1,0 +1,201 @@
+.pricing {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--white) 0%, var(--blue-pale) 100%);
+}
+
+.pricing__header { text-align: center; margin-bottom: 40px; }
+.pricing__header .badge { margin-bottom: 16px; }
+.pricing__header .section-sub { margin: 16px auto 0; }
+
+.pricing__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 48px;
+  background: var(--gray-100);
+  border-radius: 100px;
+  padding: 5px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.pricing__tab {
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  color: var(--gray-600);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.pricing__tab.active {
+  background: white;
+  color: var(--blue-bright);
+  box-shadow: 0 2px 12px rgba(37,99,235,0.15);
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.pricing__card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  border: 1.5px solid var(--gray-200);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.pricing__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing__card--popular {
+  border-color: var(--blue-bright);
+  box-shadow: 0 8px 40px rgba(37,99,235,0.15);
+  transform: scale(1.02);
+  background: linear-gradient(160deg, #fff, var(--blue-pale));
+}
+
+.pricing__card--popular:hover {
+  transform: scale(1.02) translateY(-6px);
+}
+
+.pricing__popular-badge {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue-bright), var(--accent-warm));
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+}
+
+.pricing__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--blue-soft);
+  color: var(--blue-mid);
+  margin-bottom: 12px;
+}
+
+.pricing__emoji {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.pricing__plan-title {
+  font-size: 18px;
+  font-family: var(--font-display);
+  color: var(--blue-deep);
+  margin-bottom: 6px;
+}
+
+.pricing__plan-desc {
+  font-size: 12px;
+  color: var(--gray-400);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.pricing__price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.pricing__amount {
+  font-family: var(--font-display);
+  font-size: 36px;
+  color: var(--blue-bright);
+  font-weight: 800;
+}
+
+.pricing__currency {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-400);
+}
+
+.pricing__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.pricing__features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+.pricing__check {
+  color: var(--blue-bright);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.pricing__btn {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 20px !important;
+  font-size: 13px !important;
+}
+
+.pricing__note {
+  margin-top: 48px;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 20px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid var(--blue-soft);
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing__note-icon { font-size: 24px; flex-shrink: 0; }
+
+.pricing__note strong { color: var(--blue-deep); }
+.pricing__note { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+
+@media (max-width: 1100px) {
+  .pricing__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .pricing { padding: 60px 0; }
+  .pricing__grid { grid-template-columns: 1fr; }
+  .pricing__card--popular { transform: none; }
+  .pricing__card--popular:hover { transform: translateY(-6px); }
+  .pricing__tabs { max-width: 100%; }
+}
